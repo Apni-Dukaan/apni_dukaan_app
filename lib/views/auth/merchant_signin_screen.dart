@@ -1,10 +1,12 @@
+import 'dart:ui';
+
 import 'package:apni_dukaan_app/animations/fade_animation.dart';
 import 'package:apni_dukaan_app/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({Key key}) : super(key: key);
+class MerchantSignInScreen extends StatelessWidget {
+  const MerchantSignInScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class SignInScreen extends StatelessWidget {
                       Positioned(
                         left: 30,
                         width: 80,
-                        height: 200,
+                        height: 150,
                         child: FadeAnimation(
                             1,
                             Container(
@@ -38,7 +40,7 @@ class SignInScreen extends StatelessWidget {
                       Positioned(
                         left: 140,
                         width: 80,
-                        height: 150,
+                        height: 120,
                         child: FadeAnimation(
                             1.3,
                             Container(
@@ -69,10 +71,11 @@ class SignInScreen extends StatelessWidget {
                               margin: EdgeInsets.only(top: 50),
                               child: Center(
                                 child: Text(
-                                  "Login",
+                                  "Merchant\nLogin",
+                                  textAlign: TextAlign.right,
                                   style: TextStyle(
                                       color: white,
-                                      fontSize: 56,
+                                      fontSize: 46,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -172,26 +175,6 @@ class SignInScreen extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 'Google+',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .button
-                                    .copyWith(color: white, fontSize: 16),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      FadeAnimation(
-                        2,
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              elevation: 4.0, primary: carribean_green),
-                          onPressed: () {},
-                          child: Container(
-                            width: 0.7.sw,
-                            child: Center(
-                              child: Text(
-                                'Merchant Login',
                                 style: Theme.of(context)
                                     .textTheme
                                     .button
